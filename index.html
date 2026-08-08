@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Louay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="background"></div>
+    <div id="ambient"></div>
+
+    <section id="passwordGate">
+        <div class="password-box">
+            <div class="lock-icon">♡</div>
+            <span class="gate-label">A little secret</span>
+            <h1>Before You Enter</h1>
+            <div class="gate-line"></div>
+            <p>This little place is only for you.</p>
+            <input id="passwordInput" type="password" inputmode="numeric" maxlength="6" placeholder="Enter the password" autocomplete="off">
+            <button id="passwordBtn" class="primary">Enter <span>→</span></button>
+            <p id="passwordError" class="password-error"></p>
+        </div>
+    </section>
+
+    <section id="intro" class="hide">
+        <div class="intro-content">
+            <span>Something made just for</span>
+            <h1 id="intro-name">Louay</h1>
+            <div class="intro-line"></div>
+        </div>
+    </section>
+
+    <div class="progress">
+        <span id="progressText">01 / 07</span>
+        <div class="progress-bar"><span id="progressFill"></span></div>
+    </div>
+
+    <main>
+        <!-- 1 -->
+        <section id="screen1" class="screen">
+            <div class="eyebrow">A little place</div>
+            <h1>A Little Place<br>Made With Love For You</h1>
+            <div class="gold-line"></div>
+            <p>I know this is just a website...<br><br>But every little detail here was made with you in mind. ♡</p>
+            <button class="primary" data-next="2">Begin the journey <span>→</span></button>
+        </section>
+
+        <!-- 2 -->
+        <section id="screen2" class="screen">
+            <div class="step-number">02</div>
+            <div class="card welcome-card">
+                <div class="mini-icon">✦</div>
+                <h2>Before We Begin</h2>
+                <div class="gold-line"></div>
+                <p>There are a few little pieces of my heart waiting for you here.</p>
+                <p class="soft">Take your time. I made this little journey just for you. ♡</p>
+                <button class="primary" data-next="3">I'm ready <span>→</span></button>
+            </div>
+        </section>
+
+        <!-- 3 -->
+        <section id="screen3" class="screen">
+            <div class="step-number">03</div>
+            <h2>Three Little Things</h2>
+            <p class="subtitle">Open them one by one.</p>
+            <div class="things">
+                <button class="thing" data-message="Thank you for being in my life.🫶🏻">
+                    <span>01</span><b>✦</b><small>Open me</small>
+                </button>
+                <button class="thing" data-message="Always remember that I’m here for you.🤍">
+                    <span>02</span><b>✧</b><small>Open me</small>
+                </button>
+                <button class="thing" data-message="I miss you so much.🥹❤️">
+                    <span>03</span><b>◇</b><small>Open me</small>
+                </button>
+            </div>
+            <p id="thingMessage" class="reveal-message"></p>
+            <button id="thingsContinue" class="primary hidden" data-next="4">Continue <span>→</span></button>
+        </section>
+
+        <!-- 4 -->
+        <section id="screen4" class="screen">
+            <div class="step-number">04</div>
+            <div class="card challenge-card">
+                <div class="mini-icon">?</div>
+                <h2>One Tiny Question</h2>
+                <div class="gold-line"></div>
+                <p>Which kind of year do you think we should wish for you?</p>
+                <div class="choices">
+                    <button class="choice" data-answer="A year full of love, peace, laughter and beautiful little moments together.">Peace &amp; laughter</button>
+                    <button class="choice" data-answer="A year full of adventures, memories and moments that become our favorite stories.">Adventures &amp; memories</button>
+                </div>
+                <p id="answer" class="answer"></p>
+                <button id="answerContinue" class="primary hidden" data-next="5">Next <span>→</span></button>
+            </div>
+        </section>
+
+        <!-- 5 -->
+        <section id="screen5" class="screen">
+            <div class="step-number">05</div>
+            <h2>My Wishes For You</h2>
+            <p class="subtitle">Three wishes. One at a time.</p>
+            <div class="wish-wrap">
+                <div class="wish-card" id="wishCard">
+                    <span id="wishCount">01 / 03</span>
+                    <h3 id="wishTitle">A First Wish ♡</h3>
+                    <div class="gold-line"></div>
+                    <p id="wishText">I hope today gives you the kind of smile that I wish I could see every day.</p>
+                </div>
+                <button id="wishNext" class="primary">Reveal the next wish <span>→</span></button>
+            </div>
+        </section>
+
+        <!-- 6 -->
+        <section id="screen6" class="screen">
+            <span class="signature">For Louay</span>
+            <div class="step-number">06</div>
+            <div class="card letter-card">
+                <h2>One More Thing, My Love...</h2>
+                <div class="gold-line"></div>
+                <p id="finalLetter"></p>
+                <button id="finalBtn" class="primary hidden">One Last Surprise <span>→</span></button>
+            </div>
+        </section>
+
+        <!-- 7 -->
+        <section id="screen7" class="screen celebration-screen">
+            <div id="confetti-container"></div>
+            <div id="sparkles"></div>
+            <div id="balloons"></div>
+
+            <div class="celebration">
+                <div class="celebration-stars">✦ ✧ ★ ✧ ✦</div>
+                <div class="cake" aria-label="birthday cake">
+                    <div class="flame"></div>
+                    <div class="candle"></div>
+                    <div class="candle second"></div>
+                    <div class="candle third"></div>
+                    <div class="cake-top"></div>
+                    <div class="cake-middle"></div>
+                    <div class="cake-bottom"></div>
+                    <div class="plate"></div>
+                </div>
+
+                <p class="celebrate-small heart-glow">♡ MADE WITH LOVE FOR YOU ♡</p>
+                <h1>Happy Birthday</h1>
+                <div class="rainbow-line"></div>
+                <h2>Louay</h2>
+                <p class="year">2026</p>
+                <p class="celebrate-text">Thank you for being you.<br>I hope this little surprise made you smile. ♡</p>
+                <p class="final-heart">Happy Birthday, my love. ♡</p>
+                <button id="restart" class="celebrate-button">Watch Again ↻</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
